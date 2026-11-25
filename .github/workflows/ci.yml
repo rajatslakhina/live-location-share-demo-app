@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Resolve the remote package from GitHub + build for the iOS Simulator
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - name: Toolchain
+        run: xcodebuild -version
+      - name: Resolve LiveLocationKit from GitHub at the exact version in Package.resolved
+        run: >
+          xcodebuild -resolvePackageDependencies
+          -project Demo.xcodeproj -scheme Demo
+          -onlyUsePackageVersionsFromResolvedFile
+      - name: Build the Demo app (warnings as errors on the app target)
+        run: >
+          xcodebuild build
+          -project Demo.xcodeproj
+          -scheme Demo
+          -destination 'generic/platform=iOS Simulator'
+          -onlyUsePackageVersionsFromResolvedFile
+          CODE_SIGNING_ALLOWED=NO
+
+  age-rating:
+    name: Age-rating gate (bundled manifest vs. the App Store Connect answer)
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: The gate tool and the app pin the same library version and commit
+        run: |
+          pin() { python3 -c "import json,sys;p=next(p for p in json.load(open(sys.argv[1]))['pins'] if p['identity']=='live-location-share-kit');print(p['state']['version'],p['state']['revision'])" "$1"; }
+          app=$(pin Demo.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved)
+          tool=$(pin Tools/AgeRatingCheck/Package.resolved)
+          echo "app=$app tool=$tool"
+          test -n "$app" && test "$app" = "$tool"
+      - name: The checked-in declaration must match the capability manifest
+        run: swift run --package-path Tools/AgeRatingCheck age-rating-check Demo/Config/capabilities.json Demo/Config/age-rating.json
+      - name: Control — a drifted declaration must fail the gate
+        run: |
+          set +e
+          swift run --package-path Tools/AgeRatingCheck age-rating-check Demo/Config/capabilities.json Tools/AgeRatingCheck/fixtures/drifted-age-rating.json
+          status=$?
+          set -e
+          test "$status" -eq 1 || { echo "expected exit 1 for a drifted declaration, got $status"; exit 1; }

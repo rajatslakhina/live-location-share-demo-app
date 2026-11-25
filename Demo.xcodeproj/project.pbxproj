@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1C0FFEE00B2D30000000007 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0FFEE00B2D30000000005 /* DemoApp.swift */; };
+		A1C0FFEE00B2D30000000008 /* LiveLocation in Frameworks */ = {isa = PBXBuildFile; productRef = A1C0FFEE00B2D30000000015 /* LiveLocation */; };
+		A1C0FFEE00B2D30000000009 /* LiveLocationUI in Frameworks */ = {isa = PBXBuildFile; productRef = A1C0FFEE00B2D30000000016 /* LiveLocationUI */; };
+		A1C0FFEE00B2D30000000020 /* capabilities.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C0FFEE00B2D30000000022 /* capabilities.json */; };
+		A1C0FFEE00B2D30000000021 /* age-rating.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C0FFEE00B2D30000000023 /* age-rating.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1C0FFEE00B2D30000000005 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
+		A1C0FFEE00B2D30000000006 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C0FFEE00B2D30000000022 /* capabilities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = capabilities.json; sourceTree = "<group>"; };
+		A1C0FFEE00B2D30000000023 /* age-rating.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "age-rating.json"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1C0FFEE00B2D3000000000B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C0FFEE00B2D30000000008 /* LiveLocation in Frameworks */,
+				A1C0FFEE00B2D30000000009 /* LiveLocationUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1C0FFEE00B2D30000000002 = {
+			isa = PBXGroup;
+			children = (
+				A1C0FFEE00B2D30000000004 /* Demo */,
+				A1C0FFEE00B2D30000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1C0FFEE00B2D30000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1C0FFEE00B2D30000000006 /* Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1C0FFEE00B2D30000000004 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				A1C0FFEE00B2D30000000005 /* DemoApp.swift */,
+				A1C0FFEE00B2D30000000024 /* Config */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		A1C0FFEE00B2D30000000024 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A1C0FFEE00B2D30000000022 /* capabilities.json */,
+				A1C0FFEE00B2D30000000023 /* age-rating.json */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1C0FFEE00B2D3000000000D /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1C0FFEE00B2D3000000000F /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				A1C0FFEE00B2D3000000000A /* Sources */,
+				A1C0FFEE00B2D3000000000B /* Frameworks */,
+				A1C0FFEE00B2D3000000000C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo;
+			packageProductDependencies = (
+				A1C0FFEE00B2D30000000015 /* LiveLocation */,
+				A1C0FFEE00B2D30000000016 /* LiveLocationUI */,
+			);
+			productName = Demo;
+			productReference = A1C0FFEE00B2D30000000006 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1C0FFEE00B2D30000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2720;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					A1C0FFEE00B2D3000000000D = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A1C0FFEE00B2D3000000000E /* Build configuration list for PBXProject "Demo" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1C0FFEE00B2D30000000002;
+			packageReferences = (
+				A1C0FFEE00B2D30000000014 /* XCRemoteSwiftPackageReference "live-location-share-kit" */,
+			);
+			productRefGroup = A1C0FFEE00B2D30000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1C0FFEE00B2D3000000000D /* Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1C0FFEE00B2D3000000000C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C0FFEE00B2D30000000020 /* capabilities.json in Resources */,
+				A1C0FFEE00B2D30000000021 /* age-rating.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1C0FFEE00B2D3000000000A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C0FFEE00B2D30000000007 /* DemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A1C0FFEE00B2D30000000010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1C0FFEE00B2D30000000011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1C0FFEE00B2D30000000012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Live Location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajatlakhina.LiveLocationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1C0FFEE00B2D30000000013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Live Location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajatlakhina.LiveLocationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1C0FFEE00B2D3000000000E /* Build configuration list for PBXProject "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1C0FFEE00B2D30000000010 /* Debug */,
+				A1C0FFEE00B2D30000000011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1C0FFEE00B2D3000000000F /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1C0FFEE00B2D30000000012 /* Debug */,
+				A1C0FFEE00B2D30000000013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1C0FFEE00B2D30000000014 /* XCRemoteSwiftPackageReference "live-location-share-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rajatslakhina/live-location-share-kit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1C0FFEE00B2D30000000015 /* LiveLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1C0FFEE00B2D30000000014 /* XCRemoteSwiftPackageReference "live-location-share-kit" */;
+			productName = LiveLocation;
+		};
+		A1C0FFEE00B2D30000000016 /* LiveLocationUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1C0FFEE00B2D30000000014 /* XCRemoteSwiftPackageReference "live-location-share-kit" */;
+			productName = LiveLocationUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A1C0FFEE00B2D30000000001 /* Project object */;
+}

@@ -1,0 +1,15 @@
+{
+  "originHash" : "b407c480dee93d2cd76aa0a599f38c8096d8ed240464729e612eb30210aed394",
+  "pins" : [
+    {
+      "identity" : "live-location-share-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rajatslakhina/live-location-share-kit.git",
+      "state" : {
+        "revision" : "91bd3553d0edd969bd9b79099889fec0d373cfd3",
+        "version" : "2.1.5"
+      }
+    }
+  ],
+  "version" : 3
+}
